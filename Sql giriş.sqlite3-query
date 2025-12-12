@@ -1,0 +1,26 @@
+-- database: ../../../../AI_109_SQL/SQLDersleri (1).db
+
+-- Use the ▷ button in the top right corner to run the entire file.
+
+SELECT * FROM tiyatrolar;
+Select Oyun_Adı as Oyun , Tiyatro_İsmi as Sahne  From tiyatrolar;
+
+select Oyun_Adı as Oyun , Tiyatro_İsmi || ','|| Oyun_Kategorisi as sahne 
+ from tiyatrolar ;
+
+ select DISTINCT Oyun_Kategorisi from tiyatrolar;
+
+ select count(DISTINCT Tiyatro_İsmi) from tiyatrolar;
+
+ select * from  tiyatrolar
+    where Oyun_Kategorisi='Çocuk';
+
+select * from  tiyatrolar
+    where Oyun_Tipi="Yerli" and İzleyici_Sayısı<30;
+
+    
+select * from  tiyatrolar
+    where Oyun_Tipi="Yerli" or İzleyici_Sayısı<30;
+
+select * from  tiyatrolar
+    where  Oyun_Kategorisi !='Çocuk';
